@@ -10,7 +10,7 @@
 			"type": "string"
 		},
 		"p_site_prefix": {
-			"defaultValue": "githubci",
+			"defaultValue": "githubcibrkc2",
 			"type": "string"
 		},
 		"p_site_web_name": {
@@ -47,6 +47,42 @@
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"type": "Microsoft.Web/sites",
+			"kind": "app",
+			"name": "[variables('site_web_name')]",
+			"apiVersion": "2016-08-01",
+			"location": "[resourceGroup().location]",
+			"properties": {
+				"name": "[variables('site_web_name')]",
+				"reserved": false,
+				"siteConfig": {
+					"appSettings": [
+						{
+							"name": "COSMOS_DB_NAME",
+							"value": "[variables('comosdb_default_name')]"
+						},
+						{
+							"name": "COSMOS_DB_AUTH_KEY",
+							"value": "[listKeys(resourceId('Microsoft.DocumentDb/databaseAccounts', variables('comosdb_default_name')), '2015-04-08').primaryMasterKey]"
+						},
+						{
+							"name": "WEBSITE_NODE_DEFAULT_VERSION",
+							"value": "8.9.4"
+						}
+					]
+				}
+			},
+			"dependsOn": [
+				"[concat('Microsoft.DocumentDB/databaseAccounts/', variables('comosdb_default_name'))]"
+			]
 		}
-	]
+	],
+	"outputs": {
+		"web": {
+			"type": "string",
+			"value": "[variables('site_web_name')]"
+		}
+	}
 }
