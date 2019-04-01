@@ -33,19 +33,19 @@
 			"name": "[variables('comosdb_default_name')]",
 			"apiVersion": "2015-04-08",
 			"location": "[resourceGroup().location]",
-            "tags": {
-                "defaultExperience": "MongoDB"
-            },
+			"tags": {
+				"defaultExperience": "MongoDB"
+			},
 			"scale": null,
-            "properties": {
+			"properties": {
 				"name": "[variables('comosdb_default_name')]",
 				"databaseAccountOfferType": "Standard",
-                "consistencyPolicy": {
-                    "defaultConsistencyLevel": "Session",
-                    "maxIntervalInSeconds": 5,
-                    "maxStalenessPrefix": 100
-                }
-            },
+				"consistencyPolicy": {
+					"defaultConsistencyLevel": "Session",
+					"maxIntervalInSeconds": 5,
+					"maxStalenessPrefix": 100
+				}
+			},
 			"dependsOn": []
 		},
 		{
@@ -61,7 +61,7 @@
 					"appSettings": [
 						{
 							"name": "COSMOS_DB_NAME",
-							"value":"[variables('comosdb_default_name')]"
+							"value": "[variables('comosdb_default_name')]"
 						},
 						{
 							"name": "COSMOS_DB_AUTH_KEY",
@@ -74,15 +74,13 @@
 					]
 				}
 			},
-			"dependsOn": [
-				"[concat('Microsoft.DocumentDB/databaseAccounts/', variables('comosdb_default_name'))]"
-			]
+			"dependsOn": []
 		}
 	],
 	"outputs": {
 		"web": {
-      			"type": "string",
-     			 "value": "[variables('site_web_name')]"
-    			}
+			"type": "string",
+			"value": "[variables('site_web_name')]"
 		}
+	}
 }
