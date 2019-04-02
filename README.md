@@ -1,5 +1,5 @@
 [![Build Status](https://dev.azure.com/bryancross/ContosoAirDemo/_apis/build/status/bryancross.ContosoAir?branchName=master)](https://dev.azure.com/bryancross/ContosoAirDemo/_build/latest?definitionId=2&branchName=master)
-Using the PlaneTalk library now for additional easyness, for reals
+Using the PlaneTalk library now for additional easyness, for reals, no really
 
 # Microsoft.Github CI Demo
 
