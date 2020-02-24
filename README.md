@@ -2,7 +2,7 @@
 
 # Microsoft.Github CI Demo
 
-Demo website application for Contoso Air.  
+Demo website application for Contoso Air.  Hello UPS!
 Runs a nodejs server (Express v4.16) that stores customer booked flights in a CosmosDb database.
 
 ## Requirements
