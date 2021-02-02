@@ -1,3 +1,4 @@
+[![Board Status](https://dev.azure.com/bryancross0410/e0a76ca1-0ac9-4c0c-b8c5-3643c5b52a03/d09cf977-120a-426f-bb36-8b5c63d73db6/_apis/work/boardbadge/326d4e32-3719-4036-a8bb-9ed94c100d26)](https://dev.azure.com/bryancross0410/e0a76ca1-0ac9-4c0c-b8c5-3643c5b52a03/_boards/board/t/d09cf977-120a-426f-bb36-8b5c63d73db6/Microsoft.RequirementCategory)
 [![Build Status](https://dev.azure.com/brcross/ContosoDemo/_apis/build/status/bryancross.ContosoAir?branchName=master)](https://dev.azure.com/brcross/ContosoDemo/_build/latest?definitionId=3&branchName=master)
 
 # Microsoft.Github CI Demo
